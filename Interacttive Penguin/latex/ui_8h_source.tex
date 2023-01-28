@@ -1,0 +1,84 @@
+\doxysection{ui.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UI\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UI\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ LINE\_WIDTH\ 89\ }\textcolor{comment}{//\ Means:\ 89\ of\ `*`\ covers\ a\ complete\ line}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ DEFAULT\_PADDING\_CHAR\ '-\/'}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00009\ \ \ CLEAR\_FROM\_CURSOR\_TO\_END,}
+\DoxyCodeLine{00010\ \ \ CLEAR\_FROM\_CURSOR\_TO\_BEGIN,}
+\DoxyCodeLine{00011\ \ \ CLEAR\_ALL}
+\DoxyCodeLine{00012\ \}\ clear\_codes;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00015\ \ \ RESET\_COLOR,}
+\DoxyCodeLine{00016\ \ \ BLACK\_TXT\ =\ 30,}
+\DoxyCodeLine{00017\ \ \ RED\_TXT,}
+\DoxyCodeLine{00018\ \ \ GREEN\_TXT,}
+\DoxyCodeLine{00019\ \ \ YELLOW\_TXT,}
+\DoxyCodeLine{00020\ \ \ BLUE\_TXT,}
+\DoxyCodeLine{00021\ \ \ MAGENTA\_TXT,}
+\DoxyCodeLine{00022\ \ \ CYAN\_TXT,}
+\DoxyCodeLine{00023\ \ \ WHITE\_TXT,}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ BLACK\_BG\ =\ 40,}
+\DoxyCodeLine{00026\ \ \ RED\_BG,}
+\DoxyCodeLine{00027\ \ \ GREEN\_BG,}
+\DoxyCodeLine{00028\ \ \ YELLOW\_BG,}
+\DoxyCodeLine{00029\ \ \ BLUE\_BG,}
+\DoxyCodeLine{00030\ \ \ MAGENTA\_BG,}
+\DoxyCodeLine{00031\ \ \ CYAN\_BG,}
+\DoxyCodeLine{00032\ \ \ WHITE\_BG,}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ STYLE\_BOLD\ =\ 1,}
+\DoxyCodeLine{00035\ \ \ STYLE\_ITALIC\ =\ 3,}
+\DoxyCodeLine{00036\ \ \ STYLE\_UNDERLINE\ =\ 4,}
+\DoxyCodeLine{00037\ \ \ STYLE\_UNDERLINE\_OFF\ =\ 24,}
+\DoxyCodeLine{00038\ \ \ STYLE\_REVERSE\_COLORS\ =\ 7,}
+\DoxyCodeLine{00039\ \ \ STYLE\_NORMAL\ =\ 0,}
+\DoxyCodeLine{00040\ \}\ Colors;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ printLogo(Colors\ main\_color,\ Colors\ container\_color);}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ printFramedTextList(\textcolor{keywordtype}{char}\ **text\_list,\ \textcolor{keywordtype}{char}\ frame\_char,\ \textcolor{keywordtype}{int}\ list\_size);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ printFramedTextLeft(\textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{char}\ frame\_char,\ \textcolor{keywordtype}{bool}\ vertical\_frame,\ Colors\ text\_color,\ Colors\ frame\_color);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ printFramedText(\textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{char}\ frame\_char,\ \textcolor{keywordtype}{bool}\ vertical\_frame,\ \ Colors\ text\_color,\ Colors\ frame\_color);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ printErrorText(\textcolor{keywordtype}{char}\ *text);}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ printWarningText(\textcolor{keywordtype}{char}\ *text);}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ printInfoText(\textcolor{keywordtype}{char}\ *text);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ printTabs(\textcolor{keywordtype}{int}\ tabs\_count,\ Colors\ color);}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ printCharLine(\textcolor{keywordtype}{char}\ spacing\_char,\ Colors\ color);}
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ printDashLine(Colors\ color);}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ printStarLine(Colors\ color);}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ printPaddedText(\textcolor{keywordtype}{char}\ *text,\ \textcolor{keywordtype}{char}\ padding\_char,\ Colors\ color);}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ printMenu(\textcolor{keywordtype}{char}\ *menu\_title,\ \textcolor{keywordtype}{char}\ **labels,\ \textcolor{keywordtype}{char}\ *choices,\ \textcolor{keywordtype}{int}\ labels\_num,\ \textcolor{keywordtype}{char}\ padding\_char);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ clearLine();}
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ clear\_screen\_to\_bottom(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ clearScreenToTop(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ clearLine(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ clearLineToRight(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ clearLineToLeft(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ moveUp(\textcolor{keywordtype}{int}\ positions);}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{void}\ moveDown(\textcolor{keywordtype}{int}\ positions);}
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{void}\ moveRight(\textcolor{keywordtype}{int}\ positions);}
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ moveLeft(\textcolor{keywordtype}{int}\ positions);}
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ moveTo(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ saveCursor();}
+\DoxyCodeLine{00076\ \textcolor{keywordtype}{void}\ restoreCursor();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ resetColor();}
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ setColor(Colors\ color);}
+
+\end{DoxyCode}
